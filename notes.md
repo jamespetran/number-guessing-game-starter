@@ -48,8 +48,8 @@ technical tasks
     [X] setup port 5000
     [X] setup static files
     [X] generate random number function 1 to 25
-    [ ] '/guess-number GET
-    [ ] '/guess-number POST
+    [ ] '/guess-history GET
+    [X] '/guess POST
     [ ] store the prevous guess's
     [ ] send results for guess's
         [ ] high, low, correct
@@ -61,3 +61,10 @@ technical tasks
     [ ] append restart button if winner
     [ ] total guess's counter
     [ ] .empty()
+
+<!-- notes -->
+[ ] 
+{
+    guessKay: xxx,
+    resultKay: high/low/correct
+}
