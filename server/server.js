@@ -19,7 +19,9 @@ app.listen(PORT, () => {
 
 let randomNumber;
 
-let guessHistory = [];
+let guessHistory = {};
+
+let count = 1;
 
 
 function randomNumberGenerator(min, max) {
@@ -33,20 +35,22 @@ function generateNumberForGuess() {
 generateNumberForGuess();
 console.log(randomNumber);
 
+
 app.post ('/guess', (req, res) => {
   console.log('in POST /guess', req.body);
   let finalGuess = req.body;
   console.log(finalGuess.guessKay);
-  let thisGuess = new Guess(finalGuess.guessKay, 1, 2);
+  // let thisGuess = new Guess(finalGuess.guessKay, 1, 2);
+  let thisGuess = []
   console.log(thisGuess);
   guessHistory.push(thisGuess);
   console.log(guessHistory);
-  
+  count ++;
   // guessHistory.push(re)
 })
 
 function Guess(kay, james, dez) {
-  this.guessKay = kay;
+  this.guessKay[`${count}`] = kay;
   this.resultKay = compareGuess(kay);
   this.guessJames = james;
   this.resultJames = compareGuess(james);
@@ -63,6 +67,10 @@ function compareGuess(guess) {
   } else {
     return 'correct';
   }
-
-  
 }
+
+
+app.get('/guess-history', (req, res) => {
+  console.log('in GET /guess-history');
+  res.send(guessHistory);
+})

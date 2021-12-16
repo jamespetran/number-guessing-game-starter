@@ -48,11 +48,12 @@ technical tasks
     [X] setup port 5000
     [X] setup static files
     [X] generate random number function 1 to 25
-    [ ] '/guess-history GET
+    [X] '/guess-history GET
     [X] '/guess POST
-    [ ] store the prevous guess's
-    [ ] send results for guess's
-        [ ] high, low, correct
+    [X] store the prevous guess's
+    [X] send results for guess's
+        [X] high, low, correct
+    [ ] reformate guessHistory as object
 [ ] client.js
     [X] source jQuery
     [ ] set up functioning submit
