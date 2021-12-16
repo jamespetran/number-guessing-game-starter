@@ -8,19 +8,19 @@ function handleReady() {
   $('#guessNumberForm').on('submit', onSubmit);
 
   //functions
-  refresh();
+  // refresh();
 }
 
 function onSubmit(event) {
   event.preventDefault();
 
-  console.log("in o  refresh();
-nSubmit");
+  console.log("in onSubmit");
 
-  let guesses = [
-    $('#kayGuess').val(),
-    1,
-    2];
+  let guesses = {
+   guessKay: $('#kayGuess').val(),
+   guessJames: 1,
+   guessDez: 2
+  };
 
   $.ajax({
     method: 'POST',
