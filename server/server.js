@@ -15,3 +15,17 @@ app.use(express.static('server/public'));
 app.listen(PORT, () => {
   console.log ('Server is running on port', PORT)
 })
+
+
+let randomNumber;
+
+function randomNumberGenerator(min, max) {
+  return Math.floor(Math.random() * (1 + max - min) + min);
+}
+
+function generateNumberForGuess() {
+  randomNumber = randomNumberGenerator(1, 25);
+}
+
+generateNumberForGuess();
+console.log(randomNumber);
