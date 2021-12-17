@@ -58,24 +58,16 @@ table {
 }
 
 #tableArea {
+      background-color: black;
+      border: 2px solid limegreen;
       margin: 0 auto;
-      width: 1050px;
+      width: 1150px;
 }
 
-th {
+th, td {
       background-color: black;
       border: 2px solid green;
       color: chartreuse;
       padding: 20px;
 }
 
-td {
-      color: chartreuse;
-}
-
-tbody{
-      background-color: black;
-      border: 2px solid green;
-      color: chartreuse;
-      padding: 20px;
-}
