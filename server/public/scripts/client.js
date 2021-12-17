@@ -33,6 +33,7 @@ function onSubmit(event) {
     })
 
   $('.guessInput').val('');
+
 }
 
 function refresh() {
@@ -93,6 +94,8 @@ function render(guessHistory) {
           `)
 
   }
+
+  
 }
   //duplicate for other group members
   // $('#kayTable tbody').empty();

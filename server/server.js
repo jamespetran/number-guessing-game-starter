@@ -51,9 +51,9 @@ app.post ('/guess', (req, res) => {
   if (thisGuess.resultKay === 'correct') {
     winnerGuesser = 'Kay';
   } else if (thisGuess.resultJames === 'correct') {
-    winnerGuesser = 'James';
+    alert(`Congrats ${winner}`);
   } else if (thisGuess.resultDez === 'correct') {
-    winnerGuesser = 'Dez';
+    alert(`Congrats ${winner}`);
   }
   // guessHistory.push(re)
   res.sendStatus(201);
