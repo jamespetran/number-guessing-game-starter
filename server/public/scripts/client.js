@@ -51,15 +51,19 @@ function refresh() {
 
       if (response.winner !== '') {
         alert(`Congrats ${response.winner}`);
-        $('#kayTable tbody').empty();
-        $('#jamesTable tbody').empty();
-        $('#dezTable tbody').empty();
-      } 
+        // $('#kayTable tbody').empty();
+        // $('#jamesTable tbody').empty();
+        // $('#dezTable tbody').empty();
+        // $('#roundCountVal').text('0')
+        $('#newGameNotify').text("Please Start A New Game!")
+      }
     });
   // if (response.count === )
 }
 
 function render(guessHistory) {
+  $('#newGameNotify').text("")
+
   $('#kayTable tbody').empty();
   $('#jamesTable tbody').empty();
   $('#dezTable tbody').empty();
@@ -104,7 +108,7 @@ function render(guessHistory) {
 
   }
 
-  
+
 }
   //duplicate for other group members
   // $('#kayTable tbody').empty();
