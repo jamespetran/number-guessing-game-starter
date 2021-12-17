@@ -23,6 +23,8 @@ let guessHistory = [];
 
 let count = 0;
 
+let winnerGuesser='';
+
 
 function randomNumberGenerator(min, max) {
   return Math.floor(Math.random() * (1 + max - min) + min);
@@ -46,6 +48,13 @@ app.post ('/guess', (req, res) => {
   guessHistory.push(thisGuess);
   // console.log(guessHistory);
   count ++;
+  if (thisGuess.resultKay === 'correct') {
+    winnerGuesser = 'Kay';
+  } else if (thisGuess.resultJames === 'correct') {
+    winnerGuesser = 'James';
+  } else if (thisGuess.resultDez === 'correct') {
+    winnerGuesser = 'Dez';
+  }
   // guessHistory.push(re)
   res.sendStatus(201);
 })
@@ -67,6 +76,7 @@ function compareGuess(guess) {
     return 'low';
   } else {
     return 'correct';
+
   }
 }
 
@@ -75,7 +85,17 @@ app.get('/guess-history', (req, res) => {
   console.log('in GET /guess-history');
   let objectToSend = {
     history: guessHistory,
-    round: count
+    round: count,
+    winner: winnerGuesser,
   }
+  
   res.send(objectToSend);
+
+  if (objectToSend.winner !== '') {
+    count = 0;
+    guessHistory = [];
+    winnerGuesser = '';
+    generateNumberForGuess();
+    console.log(randomNumber);
+  }
 })
