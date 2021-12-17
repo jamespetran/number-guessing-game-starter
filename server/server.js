@@ -40,7 +40,7 @@ app.post ('/guess', (req, res) => {
   console.log('in POST /guess', req.body);
   let finalGuess = req.body;
   // console.log(finalGuess.guessKay);
-  let thisGuess = new Guess(finalGuess.guessKay, 1, 2);
+  let thisGuess = new Guess(finalGuess.guessKay, finalGuess.guessJames, finalGuess.guessDez);
   // let thisGuess = []
   // console.log(thisGuess);
   guessHistory.push(thisGuess);

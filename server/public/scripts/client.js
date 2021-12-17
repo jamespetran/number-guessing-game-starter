@@ -18,8 +18,8 @@ function onSubmit(event) {
 
   let guesses = {
     guessKay: $('#kayGuess').val(),
-    guessJames: 1,
-    guessDez: 2
+    guessJames: $('#jamesGuess').val(),
+    guessDez: $('#dezGuess').val()
   };
 
   $.ajax({
@@ -42,8 +42,9 @@ function refresh() {
   $.ajax(ajaxOptions)
     .then((response) => {
       console.log('AJAX request complete!', response);
-      render(response);
+      render(response.history);
     });
+  // if (response.count === )
 }
 
 function render(guessHistory) {
@@ -60,35 +61,64 @@ function render(guessHistory) {
         </td>
       </tr>
       `)
+
+
+    $('#jamesTable tbody').empty();
+    $('#jamesTable tbody').append(
+      `
+      <tr>
+        <td>
+          ${guesses.guessJames}
+        </td>
+        <td>
+          ${guesses.resultJames}
+        </td>
+      </tr>
+      `)
+
+
+    $('#dezTable tbody').empty();
+    $('#dezTable tbody').append(
+      `
+          <tr>
+            <td>
+              ${guesses.guessDez}
+            </td>
+            <td>
+              ${guesses.resultDez}
+            </td>
+          </tr>
+          `)
+
   }
-    //duplicate for other group members
-    // $('#kayTable tbody').empty();
-    // for (let guess of guessHistory) {
-    //   $('#kayTable tbody').append(
-    //     `
-    //     <tr>
-    //       <td>
-    //         ${guess.guessKay}
-    //       </td>
-    //       <td>
-    //         ${guess.resultKay}
-    //       </td>
-    //     </tr>
-    //     `)
-    // }
-    // $('#kayTable tbody').empty();
-    // for (let guess of guessHistory) {
-    //   $('#kayTable tbody').append(
-    //     `
-    //     <tr>
-    //       <td>
-    //         ${guess.guessKay}
-    //       </td>
-    //       <td>
-    //         ${guess.resultKay}
-    //       </td>
-    //     </tr>
-    //     `)
-    // }
-    
 }
+  //duplicate for other group members
+  // $('#kayTable tbody').empty();
+  // for (let guess of guessHistory) {
+  //   $('#kayTable tbody').append(
+  //     `
+  //     <tr>
+  //       <td>
+  //         ${guess.guessKay}
+  //       </td>
+  //       <td>
+  //         ${guess.resultKay}
+  //       </td>
+  //     </tr>
+  //     `)
+  // }
+  // $('#kayTable tbody').empty();
+  // for (let guess of guessHistory) {
+  //   $('#kayTable tbody').append(
+  //     `
+  //     <tr>
+  //       <td>
+  //         ${guess.guessKay}
+  //       </td>
+  //       <td>
+  //         ${guess.resultKay}
+  //       </td>
+  //     </tr>
+  //     `)
+  // }
+
