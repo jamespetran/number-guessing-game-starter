@@ -1,9 +1,50 @@
+body {
+      background-color: papayawhip;
+      background-image: url("../images/matrixNumbers.gif");
+}
+
+header {
+      border-bottom: 1px solid darkblue;
+      color: darkblue;
+      margin-left: 20%;
+      margin-right: 20%;
+      text-align: center;
+}
+
+form {
+      margin: 0 auto;
+      padding: 3rem;
+      width: 350px;
+}
+
+:placeholder-shown {
+      width: 80px;
+}
+
+#submitGuess {
+      background-color: darkblue;
+      border-radius: 10px;
+      color: papayawhip;
+}
+
 table {
+      background-color: darkblue;
       display: inline;
       margin: 2rem;
 
 }
 
 #tableArea {
-      margin-top: 1em;
+      margin: 0 auto;
+      width: 600px;
+}
+
+th {
+      background-color: darkblue;
+      color: papayawhip;
+      padding: 10px;
+}
+
+td {
+      color: papayawhip;
 }

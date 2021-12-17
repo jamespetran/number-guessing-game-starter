@@ -56,8 +56,8 @@ technical tasks
     [ ] reformate guessHistory as object
 [ ] client.js
     [X] source jQuery
-    [ ] set up functioning submit
-    [ ] set up AJAX
+    [X] set up functioning submit
+    [X] set up AJAX
     [ ] append guess's to DOM
     [ ] append restart button if winner
     [ ] total guess's counter

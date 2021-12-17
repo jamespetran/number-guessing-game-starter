@@ -17,9 +17,9 @@ function onSubmit(event) {
   console.log("in onSubmit");
 
   let guesses = {
-   guessKay: $('#kayGuess').val(),
-   guessJames: 1,
-   guessDez: 2
+    guessKay: $('#kayGuess').val(),
+    guessJames: 1,
+    guessDez: 2
   };
 
   $.ajax({
@@ -48,15 +48,15 @@ function refresh() {
 
 function render(guessHistory) {
   $('#kayTable tbody').empty();
-  for (let guess of guessHistory) {
+  for (let guesses of guessHistory) {
     $('#kayTable tbody').append(
       `
       <tr>
         <td>
-          ${guess.guessKay}
+          ${guesses.guessKay}
         </td>
         <td>
-          ${guess.resultKay}
+          ${guesses.resultKay}
         </td>
       </tr>
       `)
