@@ -1,34 +1,57 @@
 body {
-      background-color: papayawhip;
-      background-image: url("../images/matrixNumbers.gif");
+      background-color: black;
+      background-image: url("../images/matrixnumb.gif");
+      background-repeat: repeat;
+      font-family: 'Press Start 2P', cursive;
+      margin: 0;
 }
 
 header {
-      border-bottom: 1px solid darkblue;
-      color: darkblue;
+      background-color: black;
+      border: 2px solid green;
+      color: chartreuse ;
+      margin-bottom: 2rem;
       margin-left: 20%;
       margin-right: 20%;
+      padding: 3rem;
       text-align: center;
 }
 
 form {
+      background-color: limegreen;
+      border: 2px solid black;
       margin: 0 auto;
       padding: 3rem;
-      width: 350px;
+      width: 420px;
 }
 
 :placeholder-shown {
+      background-color: black;
       width: 80px;
 }
 
+::placeholder {
+      background-color: black;
+      color: chartreuse;
+      font-family: 'Press Start 2P', cursive;
+}
+
 #submitGuess {
-      background-color: darkblue;
+      background-color: black;
+      border: 2px solid black;
       border-radius: 10px;
-      color: papayawhip;
+      color: chartreuse;
+      font-family: 'Press Start 2P', cursive;
+      padding: 10px;
+}
+
+.someSpace {
+      margin-top: 2rem;
 }
 
 table {
-      background-color: darkblue;
+      background-color: black;
+      border: 2px solid limegreen;
       display: inline;
       margin: 2rem;
 
@@ -36,15 +59,16 @@ table {
 
 #tableArea {
       margin: 0 auto;
-      width: 600px;
+      width: 1050px;
 }
 
 th {
-      background-color: darkblue;
-      color: papayawhip;
-      padding: 10px;
+      background-color: black;
+      border: 2px solid green;
+      color: chartreuse;
+      padding: 20px;
 }
 
 td {
-      color: papayawhip;
+      color: chartreuse;
 }
