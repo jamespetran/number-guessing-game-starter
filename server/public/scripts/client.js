@@ -46,6 +46,8 @@ function refresh() {
     .then((response) => {
       console.log('AJAX request complete!', response);
       render(response.history);
+      // console.log(response.round);
+      $('#roundCountVal').text(response.round);
 
       if (response.winner !== '') {
         alert(`Congrats ${response.winner}`);
