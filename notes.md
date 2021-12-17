@@ -53,15 +53,15 @@ technical tasks
     [X] store the prevous guess's
     [X] send results for guess's
         [X] high, low, correct
-    [ ] reformate guessHistory as object
+    [X] reformate guessHistory as object
 [ ] client.js
     [X] source jQuery
     [X] set up functioning submit
     [X] set up AJAX
-    [ ] append guess's to DOM
-    [ ] append restart button if winner
-    [ ] total guess's counter
-    [ ] .empty()
+    [X] append guess's to DOM
+    [X] congradulate if winner
+    [X] total guess's counter
+    [X] .empty()
 
 <!-- notes -->
 [ ] 
