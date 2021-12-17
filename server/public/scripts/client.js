@@ -46,6 +46,13 @@ function refresh() {
     .then((response) => {
       console.log('AJAX request complete!', response);
       render(response.history);
+
+      if (response.winner !== '') {
+        alert(`Congrats ${response.winner}`);
+        $('#kayTable tbody').empty();
+        $('#jamesTable tbody').empty();
+        $('#dezTable tbody').empty();
+      } 
     });
   // if (response.count === )
 }
