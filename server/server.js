@@ -21,7 +21,7 @@ let randomNumber;
 
 let guessHistory = [];
 
-let count = 1;
+let count = 0;
 
 
 function randomNumberGenerator(min, max) {
@@ -39,12 +39,12 @@ console.log(randomNumber);
 app.post ('/guess', (req, res) => {
   console.log('in POST /guess', req.body);
   let finalGuess = req.body;
-  console.log(finalGuess.guessKay);
+  // console.log(finalGuess.guessKay);
   let thisGuess = new Guess(finalGuess.guessKay, 1, 2);
   // let thisGuess = []
-  console.log(thisGuess);
+  // console.log(thisGuess);
   guessHistory.push(thisGuess);
-  console.log(guessHistory);
+  // console.log(guessHistory);
   count ++;
   // guessHistory.push(re)
   res.sendStatus(201);
@@ -73,5 +73,9 @@ function compareGuess(guess) {
 
 app.get('/guess-history', (req, res) => {
   console.log('in GET /guess-history');
-  res.send({guessHistory});
+  let objectToSend = {
+    history: guessHistory,
+    round: count
+  }
+  res.send(objectToSend);
 })
