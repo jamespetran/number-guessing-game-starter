@@ -31,6 +31,8 @@ function onSubmit(event) {
       console.log('response: ', response);
       refresh();
     })
+
+  $('.guessInput').val('');
 }
 
 function refresh() {
@@ -49,6 +51,8 @@ function refresh() {
 
 function render(guessHistory) {
   $('#kayTable tbody').empty();
+  $('#jamesTable tbody').empty();
+  $('#dezTable tbody').empty();
   for (let guesses of guessHistory) {
     $('#kayTable tbody').append(
       `
@@ -63,7 +67,6 @@ function render(guessHistory) {
       `)
 
 
-    $('#jamesTable tbody').empty();
     $('#jamesTable tbody').append(
       `
       <tr>
@@ -77,7 +80,6 @@ function render(guessHistory) {
       `)
 
 
-    $('#dezTable tbody').empty();
     $('#dezTable tbody').append(
       `
           <tr>
@@ -122,3 +124,7 @@ function render(guessHistory) {
   //     `)
   // }
 
+  // function clearGuesses() {
+  //   console.log('in clearGuesses');
+  //   $('.guessInput').val('');
+  // }
