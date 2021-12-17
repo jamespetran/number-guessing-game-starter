@@ -72,3 +72,10 @@ th {
 td {
       color: chartreuse;
 }
+
+tbody{
+      background-color: black;
+      border: 2px solid green;
+      color: chartreuse;
+      padding: 20px;
+}
